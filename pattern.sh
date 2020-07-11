@@ -38,3 +38,15 @@ then
 else
         echo "invalid"
 fi
+
+read -p "Enter the Password:" password
+rule1="^[a-z]{8,}"
+rule2="[A-Z]{1,}"
+rule3="[0-9]{1,}"
+rule4="[#$%&*^@]{1}";
+if [[ $password =~ $rule1 ]] &&  [[ $password =~ $rule2 ]] &&  [[ $password =~ $rule3 ]] && [[ $password =~ $rule4 ]]
+then
+echo "Password Is Valid"
+else
+echo "Password Is Not Valid"
+fi
