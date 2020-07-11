@@ -28,3 +28,13 @@ then
 else
         echo "Invalid"
 fi
+
+
+read -p "Enter a number " number
+pattern3="^[0-9]{2}[ ][0-9]{10}$"
+if [[ $number =~ $pattern3 ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
