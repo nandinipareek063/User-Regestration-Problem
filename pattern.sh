@@ -1,5 +1,3 @@
-echo "Welcome to user regestration problem"
-
 #!/bin/bash
 echo "Welcome to User registration problem"
 read -p "Enter your first name " first
@@ -19,4 +17,14 @@ then
         echo "last name is valid";
 else
         echo "last name is invalid";
+fi
+
+
+read -p "Enter an email " email
+pattern2="^[a-zA-Z0-9]+([.][a-zA-Z0-9]+)*@[a-z]+.[a-z]{2,4}([.][a-z]{2})*$";
+if [[ $email =~ $pattern2 ]]
+then
+        echo "Valid"
+else
+        echo "Invalid"
 fi
