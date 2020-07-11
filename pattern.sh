@@ -10,3 +10,13 @@ then
 else
         echo "First name is invalid";
 fi
+
+
+read -p "Enter your last name " last
+pattern1="^[A-Z]{1}[a-z]{2.}$";
+if [[ $last =~ $pattern1 ]]
+then
+        echo "last name is valid";
+else
+        echo "last name is invalid";
+fi
